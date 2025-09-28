@@ -23,8 +23,8 @@ import traceback
 
 import bittensor as bt
 
-from template.base.neuron import BaseNeuron
-from template.utils.config import add_miner_args
+from neurons.base.neuron import BaseNeuron
+from neurons.utils.config import add_miner_args
 
 from typing import Union
 
@@ -190,7 +190,7 @@ class BaseMinerNeuron(BaseNeuron):
 
     def resync_metagraph(self):
         """Resyncs the metagraph and updates the hotkeys and moving averages based on the new metagraph."""
-        bt.logging.info("resync_metagraph()")
+        # bt.logging.info("resync_metagraph()")
 
         # Sync the metagraph.
         self.metagraph.sync(subtensor=self.subtensor)

@@ -72,7 +72,7 @@ def add_args(cls, parser):
     Adds relevant arguments to the parser for operation.
     """
 
-    parser.add_argument("--netuid", type=int, help="Subnet netuid", default=1)
+    parser.add_argument("--netuid", type=int, help="Subnet netuid", default=108)
 
     parser.add_argument(
         "--neuron.device",
@@ -158,7 +158,7 @@ def add_miner_args(cls, parser):
     parser.add_argument(
         "--wandb.project_name",
         type=str,
-        default="template-miners",
+        default="internetOfIntelligence-miners",
         help="Wandb project to log to.",
     )
 
@@ -229,14 +229,14 @@ def add_validator_args(cls, parser):
         "--neuron.vpermit_tao_limit",
         type=int,
         help="The maximum number of TAO allowed to query a validator with a vpermit.",
-        default=4096,
+        default=20_000,
     )
 
     parser.add_argument(
         "--wandb.project_name",
         type=str,
         help="The name of the project where you are sending the new run.",
-        default="template-validators",
+        default="internetOfIntelligence-validators",
     )
 
     parser.add_argument(
